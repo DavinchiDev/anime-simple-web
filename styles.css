@@ -1,28 +1,41 @@
+/* fuente utilziada */
 @import url("https://fonts.googleapis.com/css?family=Mystery+Quest");
-
+/* cuerpo de la web */
+body {
+    background-color: deepskyblue;
+}
+.cuerpo {
+    background-color: deepskyblue;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
 h1 {
     font-family: "Mystery Quest", cursive;
     font-size: 70px;
     text-align: center;
 }
-
-body {
-    background-color: darkcyan;
+/* contenido - contenedor grid apra img y texto*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 471px 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "daoko lorem";
+    justify-items: stretch;
+    align-items: stretch;
 }
-
-.anime-logo {
-    width: 35%; height: 35%;
-    display: block;
-    margin: auto;
-    float: left;
-}
-
-p {
-    vertical-align: text-top;
+.lorem {
+    grid-area: lorem;
     font-size: 35px;
-    font-weight: bold;
+    text-align: center;
+    font-family: "Mystery Quest";
 }
-
+.daoko {
+    grid-area: daoko;
+}
+/* Efectos de burbuja*/
 .burbuja {
     background: #fff;
     border-radius: 50%;
@@ -72,8 +85,26 @@ p {
     left: 75%;
     animation-duration: 8s;
 }
-
-
+.burbuja:nth-child(9){
+    width: 20px; height: 20px;
+    left: 80%;
+    animation-duration: 13s;
+}
+.burbuja:nth-child(9){
+    width: 40px; height: 40px;
+    left: 25%;
+    animation-duration: 13s;
+}
+.burbuja:nth-child(10){
+    width: 15px; height: 15px;
+    left: 33%;
+    animation-duration: 15s;
+}
+.burbuja:nth-child(11){
+    width: 50px; height: 50px;
+    left: 20%;
+    animation-duration: 11s;
+}
 @keyframes burbujas {
     0%{
         bottom: 0;
@@ -86,4 +117,49 @@ p {
         bottom: 100vh;
         opacity: 0;
     }
+}
+/* video */
+.video {
+    display: block;
+    margin: auto;
+}
+/* contenido despues de video */
+.contenido {
+    font-family: "Mystery Quest";
+    text-align: center;
+    padding: 1px;
+}
+.contenido h2{
+    font-size: 30px;
+}
+.contenido p{
+    font-size: 25px;
+}
+/* footer */
+.footer {
+    background: mediumturquoise;
+    font-size: 15px;
+    padding: 35px 0;
+    font-family: "Mystery Quest";
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.footer-container ul {
+    margin: 0 auto;
+}
+.footer-container ul li {
+    line-height: 2.5;
+}
+ul {
+    list-style: none;
+}
+a {
+    color:black;
+    text-decoration: none;
+    font-size: 20px;
 }
